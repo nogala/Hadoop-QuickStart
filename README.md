@@ -15,7 +15,17 @@ $ `yum install nano -y`
 $ `wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm"
 `
 
-$ `sudo rpm -Uvh jdk-8u181-linux-x64.rpm`
+$ `rpm -Uvh jdk-8u181-linux-x64.rpm`
+
+$ ` alternatives --config java`
+
+$ ` alternatives --config javac`
+
+$ ` sh -c "echo export JAVA_HOME=/usr/java/jdk1.8.0_161/jre >> /etc/environment"`
+
+$ ` source /etc/environment`
+
+$ ` echo $JAVA_HOME`
 
 ## Install Hadoop instructions:
 
@@ -30,6 +40,14 @@ $ `useradd hadoop`
 $ `su - hadoop`
 
 $ `ssh-keygen -t rsa -P ""`
+
+$ `exit`
+
+$ `chmod -R 650 /home/hadoop/.ssh`
+
+$ `nano /etc/ssh/sshd_config` change PasswordAuthentication ( no ) to yes
+
+$ `systemctl restart sshd`
 
 $ `ssh-copy-id -i .ssh/id_rsa.pub localhost`
 
