@@ -45,9 +45,9 @@ Maven libraries from Hadoop
 
 `$ ln -s hadoop-2.7.3 hadoop`
 
-### Setup ".bash_profile"
-
 ## Hadoop Configuration files:
+
+  Setup ".bash_profile"
 
   core-site.xml
 
