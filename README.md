@@ -4,46 +4,48 @@ Maven libraries from Hadoop
 
 ## Hadoop denpendecies:
 
-`$ sudo su -`
+$ `sudo su -`
 
-`$ yum install wget`
+$ `yum update -y`
 
-`$ yum install nano`
+$ `yum install wget -y`
 
-`$ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm"
+$ `yum install nano -y`
+
+$ `wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm"
 `
 
-`$ sudo rpm -Uvh jdk-8u181-linux-x64.rpm`
+$ `sudo rpm -Uvh jdk-8u181-linux-x64.rpm`
 
 ## Install Hadoop instructions:
 
-`$ sudo su -`
+$ `sudo su -`
 
-`$ chkconfig iptables off; service iptables stop`
+$ `chkconfig iptables off; service iptables stop`
 
-`$ nano /etc/resolv.conf points to nameserver`
+$ `nano /etc/resolv.conf points to nameserver`
 
-`$ useradd hadoop`
+$ `useradd hadoop`
 
-`$ su - hadoop`
+$ `su - hadoop`
 
-`$ ssh-keygen -t rsa -P ""`
+$ `ssh-keygen -t rsa -P ""`
 
-`$ ssh-copy-id -i .ssh/id_rsa.pub localhost`
+$ `ssh-copy-id -i .ssh/id_rsa.pub localhost`
 
-`$ ssh localhost`
+$ `ssh localhost`
 
-`$ exit`
+$ `exit`
 
-`$ tar -xzvf hadoop-2.9.1.tar.gz `
+$ `tar -xzvf hadoop-2.9.1.tar.gz `
 
-`$ sudo su -`
+$ `sudo su -`
 
-`$ mv hadoop-2.9.1 /opt/.`
+$ `mv hadoop-2.9.1 /opt/.`
 
-`$ cd /opt`
+$ `cd /opt`
 
-`$ ln -s hadoop-2.7.3 hadoop`
+$ `ln -s hadoop-2.7.3 hadoop`
 
 ## Hadoop Configuration files:
 
@@ -59,10 +61,10 @@ Maven libraries from Hadoop
 
 ## Commands to start services:
 
-`$ hadoop namenode -format`
+$ `hadoop namenode -format`
 
-`$ hadoop-daemon.sh start namenode`
+$ `hadoop-daemon.sh start namenode`
 
-`$ yarn-daemon.sh start resourcemanager`
+$ `yarn-daemon.sh start resourcemanager`
 
-`$ yarn-daemon.sh start nodemanager`
+$ `yarn-daemon.sh start nodemanager`
