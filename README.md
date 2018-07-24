@@ -21,7 +21,7 @@ $ ` alternatives --config java`
 
 $ ` alternatives --config javac`
 
-$ ` sh -c "echo export JAVA_HOME=/usr/java/jdk1.8.0_161/jre >> /etc/environment"`
+$ ` sh -c "echo export JAVA_HOME=/usr/java/latest/jre >> /etc/environment"`
 
 $ ` source /etc/environment`
 
