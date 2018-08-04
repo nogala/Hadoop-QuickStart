@@ -63,7 +63,7 @@ $ `mv hadoop-2.9.1 /opt/.`
 
 $ `cd /opt`
 
-$ `ln -s hadoop-2.7.3 hadoop`
+$ `ln -s hadoop-2.9.1 hadoop`
 
 ## Hadoop Configuration files:
 
